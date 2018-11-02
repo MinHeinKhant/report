@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import Dashboard from '../components/layout/Dashboard';
 import Students from '../components/Students/Students';
@@ -8,7 +8,7 @@ import AppNavbar from '../components/layout/AppNavbar';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div>
         <AppNavbar />
         <Switch>
@@ -18,7 +18,7 @@ const AppRouter = () => {
           <Route component={NotFound} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
