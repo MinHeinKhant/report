@@ -8,7 +8,7 @@ import AppNavbar from '../components/layout/AppNavbar';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div>
         <AppNavbar />
         <Switch>
